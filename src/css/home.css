@@ -1,0 +1,14 @@
+.home {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full viewport height */
+    width: 100vw;             /* Full viewport width */
+    text-align: center;       /* Centers text inside */
+  }
+  
+  .home-content {
+    max-width: 80%;
+    color: rgba(233, 111, 75, 0.993);
+  }
+  

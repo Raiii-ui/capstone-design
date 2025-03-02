@@ -1,0 +1,126 @@
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  width: 140px;
+  height: 95vh;
+  background: #ebd6ae;
+  color: #e0b26b;
+  transition: width 0.3s ease-in-out;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.sidebar:hover {
+  width: 280px; /* Expands on hover */
+}
+
+.sidebar .logo {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: #e6cc97;
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s;
+  width: 100%;
+  gap: 15px;
+  font-size: 18px;
+}
+
+/* ✅ Push "Login" to the Bottom */
+.sidebar ul .last-item {
+  margin-top: auto;
+}
+
+.sidebar ul li:hover {
+  background: #795548;
+  color: #ceb786;
+  box-shadow: inset 0 0 5px rgba(224, 194, 166, 0.2);
+}
+
+/* Sidebar Icons */
+.sidebar ul li i {
+  min-width: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Sidebar Text */
+.sidebar ul li span {
+  display: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar:hover ul li span {
+  display: inline;
+}
+
+/* Main Content */
+.main-content {
+  background-color: #f5ebe0;
+  margin-left: 140px; /* Matches default sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100% - 140px); /* Adjust width dynamically */
+  max-width: 100%;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 280px; /* Matches expanded sidebar width */
+  width: calc(100% - 280px);
+}
+
+/* ✅ Prevents horizontal scrollbar */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Login Button in Upper-Right */
+.login-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  background: #ff5733; /* Opera GX red */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.login-btn:hover {
+  background: #e64a2e;
+}
