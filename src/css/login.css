@@ -1,0 +1,108 @@
+/* General background styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%; /* Ensure full width */
+  background: #d2b48c; /* Warm coffee-like background */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 40;
+}
+
+.login-box {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+
+  /* ✅ Zoom in the background image */
+  background: url('/images/bookshelves.jpg') center/cover no-repeat;
+  background-size: 130%;
+  background-position: center;
+  overflow: hidden;
+}
+
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url('/images/bookshelves.jpg') center/cover no-repeat;
+  background-size: 200%;
+  background-position: center;
+
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+/* Text Styling */
+h2 {
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Input Fields */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #a0795e; /* Warmer border color */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.login-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #6b4f3f; /* Darker coffee brown */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+
+.login-button:hover {
+  background: #5e4036;
+}
+
+/* Forgot Password */
+.forgot-password {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 3;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}

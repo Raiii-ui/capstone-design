@@ -1,0 +1,15 @@
+.dashboard-container {
+    padding: 20px;
+    background-color: #f9f1e7; /* Light beige like your reference */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-container h1 {
+    color: #5a3e2b;
+  }
+  
+  .dashboard-container p {
+    color: #7a5d47;
+  }
+  
